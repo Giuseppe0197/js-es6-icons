@@ -162,19 +162,20 @@ iconsPage.forEach((element) => {
 
 let menuIcons = document.getElementById("typesIcons");
 
-/* let animals = document.getElementsByClassName("animal");
+let animals = document.getElementsByClassName("animal");
 
 let vegetables = document.getElementsByClassName("vegetable");
 
-let users = document.getElementsByClassName("user"); */
+let users = document.getElementsByClassName("user");
+
 
 document.querySelector('select').addEventListener("change",
 
 	function(){
 
-		console.log('aaa');
+		console.log(this.value);
 
-		containerDiv.textContent = this.value;
+		containerDiv.innerHTML = this.value;
 
 	}
 );
