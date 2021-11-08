@@ -137,7 +137,7 @@ iconsPage.forEach((element) => {
 	/* aggiungiamo anche la classe del colore, che poi andrà cambiata dal css in base all'elemento che ha la classe di un determinato colore */
 
 	elementCreation = `
-	<div class="containerIcons">
+	<div class="containerIcons ${element.type}">
 
 		<div class="icon">
 
@@ -158,5 +158,26 @@ iconsPage.forEach((element) => {
 
 });
 
-/* andiamo a cambiare il colore in base all'elemento stampato */
+/* andiamo a dare la funzione del click al menu per poter filtrare le icone in base al tipo selezionato dall'utente */
+
+let menuIcons = document.getElementById("typesIcons");
+
+/* let animals = document.getElementsByClassName("animal");
+
+let vegetables = document.getElementsByClassName("vegetable");
+
+let users = document.getElementsByClassName("user"); */
+
+document.querySelector('select').addEventListener("change",
+
+	function(){
+
+		console.log('aaa');
+
+		containerDiv.textContent = this.value;
+
+	}
+);
+
+
 

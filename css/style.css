@@ -73,3 +73,7 @@ header h1 {
 .blue {
     color: blue;
 }
+
+.fading {
+    display: none;
+}
