@@ -120,11 +120,43 @@ Ciascuna icona ha una proprietà “color”: utilizzare questa proprietà per v
 
 /* creiamo una variabile per poter stampare gli elementi in pagina */
 
+const containerDiv = document.querySelector(".container");
+
+/* creiamo una variabile vota per far contenere gli elementi */
+
+let elementCreation = "";
+
 /* andiamo a creare un ciclo per poter stampare in pagina tutti gli elementi desiderati */
 
-/* andiamo a creare la struttura di ogni elemento */
+iconsPage.forEach((element) => {
 
-/* aggiungiamo le varie key per poter stampare ogni elemento diverso */
+	/* andiamo a creare la struttura di ogni elemento */
+
+	/* aggiungiamo le varie key per poter stampare ogni elemento diverso */
+
+	/* aggiungiamo anche la classe del colore, che poi andrà cambiata dal css in base all'elemento che ha la classe di un determinato colore */
+
+	elementCreation = `
+	<div class="containerIcons">
+
+		<div class="icon">
+
+			<i class="${element.family} ${element.prefix}${element.name} ${element.color}"></i>
+
+			<div class="iconDescription">
+
+				<span>${element.name}</span>
+
+			</div>
+
+		</div>
+
+	</div>
+	`
+
+	containerDiv.innerHTML += elementCreation;
+
+});
 
 /* andiamo a cambiare il colore in base all'elemento stampato */
 
